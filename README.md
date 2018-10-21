@@ -9,6 +9,6 @@ Account Login Authentication System (AcLAS) performs non-conventional verificati
 
 Project under development.
 
-Aviral Sharma
-Department of Applied Mathematics
+Aviral Sharma<br>
+Department of Applied Mathematics<br>
 Delhi Technological University
