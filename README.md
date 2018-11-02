@@ -10,7 +10,8 @@ Jump to the project wiki to learn more about AcLAS setup.
 
 Project under development.
 
-### Next time you come here, you'll find new stuff. And if you don't, I owe you a (student's budget) party. That's a promise:)
+### Next time you come here, you'll find new stuff. 
+#### And if you don't, I owe you a (student's budget) party. That's a promise:)
 
 
 
