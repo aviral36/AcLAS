@@ -6,6 +6,7 @@
 
 Account Login Authentication System (AcLAS) performs non-conventional verification techniques to identify genuineness in a login attempt. 
 
+Jump to the project wiki to learn more about AcLAS setup.
 
 Project under development.
 
