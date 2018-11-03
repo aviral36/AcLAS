@@ -1,3 +1,4 @@
+#importing necessary libraries
 import tkinter as tk
 from PIL import ImageTk, Image
 import pickle
@@ -14,29 +15,31 @@ from keyboard_event_recorders import tracer
 np.set_printoptions(precision = 20)
 pd.set_option("display.precision", 20)
 
-
+#sets the training string that will be used for keystroke analysis.
 train_text = 'mathematics'
 
-
+#clears the txt file containing past records. 
+#Called by the tkinter button "CLEAR ALL RECORDS".
 def clear_records():
     open("human_typing_analysis_data.txt", 'w').close()
     print("All records have been deleted.")
 
-
+#starts recording keystrokes. Runs in background while the user types on window.
 def start_recording():
     print("<<<Recording>>>")
     start_recording.traces = tracer()
     start_recording.traces.append(username)
     print(start_recording.traces)
 
+#Gets the string input by user. Called when person presses the "Enter" key.    
 def get_string(e):
     string = e.widget.get()
-    if string == train_text:
+    if string == train_text:                            #check whether input equals train text
         print("Your entry has been recorded!")
         f = open("human_typing_analysis_data.txt",'ab')
         pickle.dump(start_recording.traces, f)
         f.close()
-    else:
+    else:                                               #discard input if input word does not match train text
         print("You made a mistake while recording :(!")
     
 def input_window():
