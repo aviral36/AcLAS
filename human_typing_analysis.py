@@ -1,15 +1,15 @@
 #importing necessary libraries
-import tkinter as tk
-from PIL import ImageTk, Image
-import pickle
-import numpy as np
-import pandas as pd
-import matplotlib
-import matplotlib.pyplot as plt
-from positioning import center
-import threading
-from collections import OrderedDict
-from keyboard_event_recorders import tracer
+import tkinter as tk                                            #for tkinter GUI
+from PIL import ImageTk, Image                                  #to display AcLAS logo on window
+import pickle                                                   #for writing binary data into file
+import numpy as np                                              #data science
+import pandas as pd                                             #data science  
+import matplotlib                                               #plot
+import matplotlib.pyplot as plt                                 #plot
+from positioning import center                                  #to bring tkinter window into center of screen
+import threading                                                #run processes in parallel
+from collections import OrderedDict                             #not necessary - just keeps my dictionary in order
+from keyboard_event_recorders import tracer                     #records keystroke events
 
 #setting display parameters
 np.set_printoptions(precision = 20)
