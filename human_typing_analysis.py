@@ -29,17 +29,17 @@ def start_recording():
     print("<<<Recording>>>")
     start_recording.traces = tracer()
     start_recording.traces.append(username)
-    print(start_recording.traces)
+    print(start_recording.traces)                           #statement has no purpose apart from visual verification
 
 #Gets the string input by user. Called when person presses the "Enter" key.    
 def get_string(e):
     string = e.widget.get()
-    if string == train_text:                            #check whether input equals train text
+    if string == train_text:                                #checks whether input equals train text
         print("Your entry has been recorded!")
         f = open("human_typing_analysis_data.txt",'ab')
         pickle.dump(start_recording.traces, f)
         f.close()
-    else:                                               #discard input if input word does not match train text
+    else:                                                   #discard input if input word does not match train text
         print("You made a mistake while recording :(!")
     
 def input_window():
