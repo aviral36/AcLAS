@@ -1,3 +1,6 @@
+#keyboard is not an in-built library.
+#To install keyboard, see the instructions at https://github.com/boppreh/keyboard.
+
 import keyboard
 
 def make_list(event):
