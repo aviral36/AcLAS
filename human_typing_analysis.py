@@ -42,7 +42,7 @@ def get_string(e):
     else:                                                   #discard input if input word does not match train text
         print("You made a mistake while recording :(!")
     
-def input_window():
+def input_window():                                         #creates a new tkinter window to fetch input from user.
     window = tk.Tk()
     window.geometry('500x200')
     window.focus_force()
@@ -59,9 +59,9 @@ def input_window():
     center(window)
     window.mainloop()
     
-def start_thread():
-        t1 = threading.Thread(target = start_recording)
-        t2 = threading.Thread(target = input_window)
+def start_thread():                                                 #function enables threading between recording and getting input
+        t1 = threading.Thread(target = start_recording)             #calls the function to start recording events
+        t2 = threading.Thread(target = input_window)                #calls the function that accepts input from user
         t1.start()
         t2.start()
         t1.join()
