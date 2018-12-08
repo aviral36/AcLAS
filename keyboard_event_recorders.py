@@ -6,11 +6,12 @@ import keyboard
 def make_list(event):
 
         #This function makes list of all keyboard entries captured.
-        key_names = list()
-        down_times = list()
-        up_times = list()
-        hold_times = list()
+        key_names = list()                                      #gets key press id, helps confirm whether the correct key was pressed
+        down_times = list()                                     #returns timestamp when key was pressed.
+        up_times = list()                                       #returns the timestamp when key was released.
+        hold_times = list()                                     #timestamp indicating the uptime and downtime.
         
+        #the bypass list tells which keys should not be considered while recording the keystrokes.
         bypass = ['shift', 'right shift', 'backspace', 'tab', 'enter', 'esc', 'ctrl', 'right ctrl', 'left', 'right', 'up', 'down', 'caps lock']
 
         for e in event:
